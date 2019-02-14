@@ -1,9 +1,12 @@
 import React from "react";
-import Ticket from "./Card";
+import Card from "./Card";
 
 function CardList(){
   return (
-    <Card/>
+    <Card
+      location="3A"
+      names="Thato and Haley"
+      issue="Firebase will not save record!"/>
   );
 }
 
