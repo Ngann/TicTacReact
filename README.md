@@ -69,3 +69,6 @@ $ eslint --init
 
 $ eslint src/** src/**/**  to run Linter
 $ eslint src/** src/**/** --fix to fix issues
+
+ESLint Loader: to automatically run when bundle
+$ npm install eslint-loader --save-dev
