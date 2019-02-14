@@ -1,6 +1,6 @@
-import React from "react";
-import Header from "./Header";
-import CardList from "./CardList";
+import React from 'react';
+import Header from './Header';
+import CardList from './CardList';
 
 function App(){
   return (

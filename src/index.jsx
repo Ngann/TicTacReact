@@ -12,10 +12,12 @@ const render = (Component) => {
   );
 };
 
+/*eslint-disable */
 render(App);
 
 if (module.hot) {
   module.hot.accept('./components/App', () => {
-    render(App)
+    render(App);
   });
 }
+/*eslint-enable */
