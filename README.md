@@ -87,3 +87,7 @@ import { Switch, Route } from 'react-router-dom';
 
 Linking Between Routes
 import { Link } from 'react-router-dom';
+
+Configuring Webpack to Encode and Bundle Images:
+$ npm install url-loader@0.6.2 --save-dev
+$ npm install file-loader@1.1.6 --save-dev
