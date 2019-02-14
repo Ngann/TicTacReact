@@ -78,3 +78,12 @@ $ npm install --save styled-jsx
 
 Implementing React-Router:
 $ npm install react-router-dom@4.0.0 --save
+import { HashRouter } from 'react-router-dom';
+
+Defining Routes
+import { Switch, Route } from 'react-router-dom';
+ ex: localhost:8080/#/newcard
+  Anything included after a # symbol is not sent to the server. This means the server only "sees" localhost:8080/, and sends our big bundle.js file.
+
+Linking Between Routes
+import { Link } from 'react-router-dom';
