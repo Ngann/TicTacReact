@@ -72,3 +72,9 @@ $ eslint src/** src/**/** --fix to fix issues
 
 ESLint Loader: to automatically run when bundle
 $ npm install eslint-loader --save-dev
+
+Configuring CSS Modules:
+$ npm install --save styled-jsx
+
+Implementing React-Router:
+$ npm install react-router-dom@4.0.0 --save
