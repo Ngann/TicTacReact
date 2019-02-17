@@ -1,24 +1,31 @@
 import React from 'react';
 
 function NewCardForm(){
+
+  function handleNewTicketFormSubmission(event) {
+    event.preventDefault();
+  }
   return (
     <div>
-      <form>
+      <form onSubmit={handleNewTicketFormSubmission}>
         <input
           type='text'
           id='names'
-          placeholder='Pair Names'/>
+          placeholder='Pair Names'
+          ref={(input) => {_names = input;}}/>
         <input
           type='text'
           id='location'
-          placeholder='Location'/>
+          placeholder='Location'
+          ref={(input) => {_location = input;}}/>
         <textarea
           id='issue'
-          placeholder='Describe your issue.'/>
+          placeholder='Describe your issue.'
+          ref={(textarea) => {_issue = textarea;}}/>
         <button type='submit'>Help!</button>
       </form>
     </div>
-  );
+  );  
 }
 
 export default NewCardForm;
