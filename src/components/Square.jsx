@@ -10,4 +10,6 @@ function Square(props){
   );
 }
 
+//functional component does not need to worry about this because when the props come into a class component it goes to the constructor which stores it as this.props... but with a function component you can pass the property directly.
+
 export default Square;
