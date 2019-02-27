@@ -1,18 +1,29 @@
 import React from 'react';
 import Square from './Square';
 import PropTypes from 'prop-types';
-// import calculateWinner from './Winner';
+import calculateWinner from './Winner';
 
 class Board extends React.Component {
-  //renderSquare pass in a property i which is attached to the Square component as a value. In the square component as add this.prop.value to the button.
-  //this passes the prop from parent(Board) component to the child(Square). It is passing the numbers to the individual sqaure component
+  handleClick(i) {
+    const squares = this.state.squares.slice();
+    if (calculateWinner(squares) || squares[i]){
+      return;
+    }
+    squares[i] = this.state.xIsNext ? 'X' : 'O';
+    this.setState({
+      squares: squares,
+      xIsNext: !this.state.xIsNext,
+    });
+  }
+
   renderSquare(i) {
-    return <Square value={i}/>;
+    //each square will not receive a value prop this will either be 'X', 'O', or null
+    //now we're passing down two props to the child(Square) value and onClick.
+    return <Square value={this.props.squares[i]}
+        onClick={() => this.props.onClick(i)}/>;
   }
 
   render(){
-    const status = 'Next player: X';
-
     return (
       <div>
         <div className="status">{status}</div>
